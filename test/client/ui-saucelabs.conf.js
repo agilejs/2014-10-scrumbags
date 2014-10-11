@@ -5,7 +5,7 @@ exports.config = {
     baseUrl: 'http://localhost:3000',
     capabilities: {
       'browserName': 'firefox',
-      'platform': 'Linux',
+      'platform': 'Windows 7',
       'version': '32',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
       'build': process.env.TRAVIS_BUILD_NUMBER,

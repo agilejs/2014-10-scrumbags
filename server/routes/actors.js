@@ -13,12 +13,6 @@ exports = module.exports = function (db) {
 
     var exports = {};
 
-    // helper function to return the absolute base uri used in the request
-    function getAbsoluteUriBase(req) {
-        // we use req.get('host') as this also gives us the port
-        return req.protocol + '://' + req.get('host');
-    }
-
     exports.addActor = function (req, res) {
         var node = db.createNode(req.body);
         node.data.type = 'actor';
@@ -43,4 +37,4 @@ exports = module.exports = function (db) {
             //    .send(savedNode.data);
         });
     };
-}
+};

@@ -129,17 +129,17 @@ exports = module.exports = function (db) {
                 return res.status(404).send();
             }
 
-            var fault = savedNode.data.title.$dirty;
-            var fault1 = savedNode.data.title.$invalid;
-            var fault2 = savedNode.data.title === '';
+            var fault = node.data.title.$dirty;
+            var fault1 = node.data.title.$invalid;
+            var fault2 = node.data.title === '';
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();
             }
 
-            fault = savedNode.data.release.$dirty;
-            fault1 = savedNode.data.release.$invalid;
-            fault2 = savedNode.data.release.length !== 4;
+            fault = node.data.release.$dirty;
+            fault1 = node.data.release.$invalid;
+            fault2 = node.data.release.length !== 4;
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();

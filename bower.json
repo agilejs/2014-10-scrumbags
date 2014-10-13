@@ -20,6 +20,7 @@
   "dependencies": {
     "angular-route": "1.2.26",
     "angular": "1.2.26",
-    "bootstrap": "2.3.2"
+    "bootstrap": "2.3.2",
+    "textAngular": "1.2.2"
   }
 }

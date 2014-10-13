@@ -11,7 +11,7 @@ function WelcomeCtrl ($scope, moviesResponse) {
     $scope.movies = moviesResponse.data;
     for(var i= 0; i < $scope.movies.length; i++){
         if(!$scope.movies[i].hasOwnProperty('release')){
-            $scope.movies[i].release="unknown";
+            $scope.movies[i].release='unknown';
         }
     }
 }
@@ -21,7 +21,7 @@ function MoviesListCtrl ($scope, $location, moviesResponse) {
     $scope.movies = moviesResponse.data;
     for(var i= 0; i < $scope.movies.length; i++){
         if(!$scope.movies[i].hasOwnProperty('release')){
-            $scope.movies[i].release="unknown";
+            $scope.movies[i].release='unknown';
         }
     }
     $scope.add = function(){
@@ -51,7 +51,7 @@ function MovieDetailCtrl ($scope, $http, $location, moviesResponse) {
     'use strict';
     $scope.movie = moviesResponse.data;
     if(!$scope.movie.hasOwnProperty('release')){
-        $scope.movie.release="unknown";
+        $scope.movie.release='unknown';
     }
 
 

@@ -1,11 +1,11 @@
 <table class="table table-striped table-hover">
     <thead>
     <tr>
-        <th>Title</th>
+        <th ng-click="reverse = !reverse">Title</th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="movie in movies | orderBy:'title'">
+    <tr ng-repeat="movie in movies | orderBy:'title' : reverse = reverse">
         <td>
             <a href="#" ng-href="/movies/{{movie.id}}">
                 {{movie.title}}

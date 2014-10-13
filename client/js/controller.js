@@ -1,6 +1,9 @@
-function AppCtrl ($scope) {
+function AppCtrl ($scope, $location) {
     'use strict';
     $scope.title = 'The Movie Database';
+    $scope.isActive = function(route) {
+        return route === $location.path();
+    }
 }
 
 function WelcomeCtrl ($scope, moviesResponse) {
@@ -13,6 +16,7 @@ function MoviesListCtrl ($scope, $location, moviesResponse) {
     $scope.add = function () {
         $location.path('/movies/new');
     };
+
 }
 
 MoviesListCtrl.resolve = {

@@ -1,13 +1,15 @@
-<form class="form-horizontal">
+<form class="form-horizontal" name="addMovie" novalidate>
   <div class="control-group">
     <label class="control-label" for="inputTitle">Title</label>
     <div class="controls">
       <input type="text"
              id="inputTitle"
              name="title"
+             required
              class="input-block-level"
              autofocus
              ng-model="movie.title">
+        <span ng-show="addMovie.title.$dirty && addMovie.title.$invalid">This field is required</span>
     </div>
   </div>
     <div class="control-group">
@@ -16,8 +18,12 @@
             <input    type="number"
                       id="inputRelease"
                       name="release"
+                      required
+                      ng-minlength="4"
+                      ng-maxlength="4"
                       class="input-block-level"
                       ng-model="movie.release">
+            <span ng-show="addMovie.release.$dirty && addMovie.release.$invalid">Four digits expected</span>
         </div>
     </div>
   <div class="control-group">
@@ -33,6 +39,7 @@
   </div>
   <div class="form-actions">
     <button type="submit"
+            ng-show="addMovie.$valid"
             class="btn btn-primary"
             ng-click="save(movie)">
       Save

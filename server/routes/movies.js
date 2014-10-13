@@ -37,7 +37,6 @@ exports = module.exports = function (db) {
             var movies = nodes.map(function (node) {
                 return node.data;
             });
-
             logger.debug('Successfully loaded %d movies.', movies.length);
             res.send(movies);
         });

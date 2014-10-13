@@ -2,7 +2,8 @@
 
 <dl class="dl-horizontal">
   <dt>Description</dt>
-  <dd>{{movie.description}}</dd>
+  <dd><div ng-bind-html="movie.description"></div></dd>
+    <dt>Release year</dt>
     <dd>{{movie.release}}</dd>
 </dl>
 

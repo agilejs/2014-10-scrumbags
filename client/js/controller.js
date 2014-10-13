@@ -9,11 +9,21 @@ function AppCtrl ($scope, $location) {
 function WelcomeCtrl ($scope, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
+    for(var i= 0; i < $scope.movies.length; i++){
+        if(!$scope.movies[i].hasOwnProperty('release')){
+            $scope.movies[i].release="unknown";
+        }
+    }
 }
 
 function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
+    for(var i= 0; i < $scope.movies.length; i++){
+        if(!$scope.movies[i].hasOwnProperty('release')){
+            $scope.movies[i].release="unknown";
+        }
+    }
     $scope.add = function(){
         $location.path = '/movies/new';
     };
@@ -40,6 +50,10 @@ function MoviesAddCtrl ($scope, $http, $location) {
 function MovieDetailCtrl ($scope, $http, $location, moviesResponse) {
     'use strict';
     $scope.movie = moviesResponse.data;
+    if(!$scope.movie.hasOwnProperty('release')){
+        $scope.movie.release="unknown";
+    }
+
 
     $scope['delete'] = function () {
         $http['delete']('/movies/' + $scope.movie.id).success(function (res) {

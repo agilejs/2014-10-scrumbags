@@ -7,6 +7,7 @@ function AppCtrl ($scope, $location) {
 }
 
 function WelcomeCtrl ($scope, moviesResponse) {
+    'use strict';
     $scope.movies = moviesResponse.data;
 }
 
@@ -20,7 +21,6 @@ function MoviesListCtrl ($scope, $location, moviesResponse) {
             $location.path('/movies/new');
         }
     };
-
 }
 
 MoviesListCtrl.resolve = {

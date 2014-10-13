@@ -91,6 +91,21 @@ exports = module.exports = function (db) {
                 logger.error('Failed to add movie: %s', err);
                 return res.status(500).send();
             }
+            var fault = savedNode.data.title.$dirty;
+            var fault1 = savedNode.data.title.$invalid;
+            var fault2 = savedNode.data.title === "";
+            if(fault || fault1 || fault2){
+                logger.error('Failed to add movie: %s', err);
+                return res.status(422).send();
+            }
+
+            fault = savedNode.data.release.$dirty;
+            fault1 = savedNode.data.release.$invalid;
+            fault2 = savedNode.data.release.length != 4;
+            if(fault || fault1 || fault2){
+                logger.error('Failed to add movie: %s', err);
+                return res.status(422).send();
+            }
 
             logger.debug('Added new movie with id %s', savedNode.data.id);
             res.status(201)
@@ -113,6 +128,23 @@ exports = module.exports = function (db) {
                 logger.debug('Movie#%s could not be found for update.', id);
                 return res.status(404).send();
             }
+
+            var fault = savedNode.data.title.$dirty;
+            var fault1 = savedNode.data.title.$invalid;
+            var fault2 = savedNode.data.title === "";
+            if(fault || fault1 || fault2){
+                logger.error('Failed to add movie: %s', err);
+                return res.status(422).send();
+            }
+
+            fault = savedNode.data.release.$dirty;
+            fault1 = savedNode.data.release.$invalid;
+            fault2 = savedNode.data.release.length != 4;
+            if(fault || fault1 || fault2){
+                logger.error('Failed to add movie: %s', err);
+                return res.status(422).send();
+            }
+
             node.data.title = req.body.title;
             node.data.description = req.body.description;
             node.data.release = req.body.release;

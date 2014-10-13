@@ -116,6 +116,7 @@ exports = module.exports = function (db) {
             }
             node.data.title = req.body.title;
             node.data.description = req.body.description;
+            node.data.release = req.body.release;
             node.save(function (err, savedNode) {
                 if (err) {
                     logger.error('Failed to update movie#%s: %s', id, err);

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b93db5a-5690-4aed-ac72-df152d7193f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/controller.js" afterPath="$PROJECT_DIR$/client/js/controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/movies.js" afterPath="$PROJECT_DIR$/server/routes/movies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="2014-10-scrumbags.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="movies.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="movies.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="3060">
-              <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+            <state vertical-scroll-proportion="-0.25494277" vertical-offset="2099" max-vertical-offset="3060">
+              <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -45,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.98126954" vertical-offset="11" max-vertical-offset="1836">
-              <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="1836">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -77,8 +78,8 @@
         <option value="$PROJECT_DIR$/client/partial/movies/detail.html" />
         <option value="$PROJECT_DIR$/client/partial/movies/_list.html" />
         <option value="$PROJECT_DIR$/client/partial/movies/_form.html" />
-        <option value="$PROJECT_DIR$/server/routes/movies.js" />
         <option value="$PROJECT_DIR$/client/js/controller.js" />
+        <option value="$PROJECT_DIR$/server/routes/movies.js" />
       </list>
     </option>
   </component>
@@ -476,18 +477,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/movies.js">
+    <entry file="file://$PROJECT_DIR$/client/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="3060">
-          <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="1836">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/server/routes/movies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.98126954" vertical-offset="11" max-vertical-offset="1836">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.25494277" vertical-offset="2099" max-vertical-offset="3060">
+          <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
           <folding />
         </state>
       </provider>

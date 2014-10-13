@@ -101,7 +101,7 @@ exports = module.exports = function (db) {
 
             fault = savedNode.data.release.$dirty;
             fault1 = savedNode.data.release.$invalid;
-            fault2 = savedNode.data.release.length != 4;
+            fault2 = savedNode.data.release.length !== 4;
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();
@@ -139,7 +139,7 @@ exports = module.exports = function (db) {
 
             fault = savedNode.data.release.$dirty;
             fault1 = savedNode.data.release.$invalid;
-            fault2 = savedNode.data.release.length != 4;
+            fault2 = savedNode.data.release.length !== 4;
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();

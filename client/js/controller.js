@@ -25,7 +25,7 @@ function MoviesListCtrl ($scope, $location, moviesResponse) {
         }
     }
     $scope.add = function(){
-        $location.path = '/movies/new';
+        return $location.path = '/movies/new';
     };
 }
 

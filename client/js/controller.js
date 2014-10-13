@@ -3,7 +3,7 @@ function AppCtrl ($scope, $location) {
     $scope.title = 'The Movie Database';
     $scope.isActive = function(route) {
         return route === $location.path();
-    }
+    };
 }
 
 function WelcomeCtrl ($scope, moviesResponse) {
@@ -13,8 +13,12 @@ function WelcomeCtrl ($scope, moviesResponse) {
 function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
-    $scope.add = function () {
-        $location.path('/movies/new');
+    $scope.add = function (event) {
+        if(event.ctrlKey == 1){
+            window.open('/movies/new');
+        }else {
+            $location.path('/movies/new');
+        }
     };
 
 }

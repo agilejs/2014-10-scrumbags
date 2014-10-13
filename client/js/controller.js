@@ -11,16 +11,9 @@ function WelcomeCtrl ($scope, moviesResponse) {
     $scope.movies = moviesResponse.data;
 }
 
-function MoviesListCtrl ($scope, $location, moviesResponse) {
+function MoviesListCtrl ($scope, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
-    $scope.add = function (event) {
-        if(event.ctrlKey == 1){
-            window.open('/movies/new');
-        }else {
-            $location.path('/movies/new');
-        }
-    };
 }
 
 MoviesListCtrl.resolve = {

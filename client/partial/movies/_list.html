@@ -2,6 +2,7 @@
     <thead>
     <tr>
         <th ng-click="reverse = !reverse">Title</th>
+        <th>Release year</th>
     </tr>
     </thead>
     <tbody>
@@ -9,6 +10,11 @@
         <td>
             <a href="#" ng-href="/movies/{{movie.id}}">
                 {{movie.title}}
+            </a>
+        </td>
+        <td>
+            <a href="#" ng-href="/movies/{{movie.id}}">
+                {{movie.release}}
             </a>
         </td>
     </tr>

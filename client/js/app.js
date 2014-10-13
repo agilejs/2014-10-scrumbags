@@ -44,6 +44,10 @@ angular.module('MovieDatabase', ['ngRoute', 'textAngular']).config(
         controller: ErrorCtrl,
         templateUrl: '/partial/error.html'
     })
+    .when('/actors', {
+        controller: ActorsAddCtrl,
+        templateUrl: '/partial/actors/add.html'
+    })
     .otherwise({
         redirectTo: function () {
             return '/404?culprit=client';

@@ -88,6 +88,18 @@ MovieEditCtrl.resolve = {
     moviesResponse: movieDetailResolver
 };
 
+
+function ActorsAddCtrl ($scope, $http, $location) {
+    'use strict';
+    $scope.actor = {};
+    $scope.save = function (actor) {
+        $http.post('/actors', actor)
+            .success(function(res) {
+                $location.path('/movies');
+            });
+    };
+}
+
 function NotFoundCtrl ($scope, $location) {
     'use strict';
     $scope.culprit = $location.search().culprit || 'unknown beast';

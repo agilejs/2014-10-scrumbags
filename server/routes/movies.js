@@ -93,7 +93,7 @@ exports = module.exports = function (db) {
             }
             var fault = savedNode.data.title.$dirty;
             var fault1 = savedNode.data.title.$invalid;
-            var fault2 = savedNode.data.title === "";
+            var fault2 = savedNode.data.title === '';
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();
@@ -131,7 +131,7 @@ exports = module.exports = function (db) {
 
             var fault = savedNode.data.title.$dirty;
             var fault1 = savedNode.data.title.$invalid;
-            var fault2 = savedNode.data.title === "";
+            var fault2 = savedNode.data.title === '';
             if(fault || fault1 || fault2){
                 logger.error('Failed to add movie: %s', err);
                 return res.status(422).send();

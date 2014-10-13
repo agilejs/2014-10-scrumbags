@@ -1,0 +1,34 @@
+<form class="form-horizontal" name="addActor" novalidate>
+    <div class="control-group">
+        <label class="control-label" for="inputName">Name</label>
+        <div class="controls">
+            <input type="text"
+                   id="inputName"
+                   name="name"
+                   required
+                   class="input-block-level"
+                   autofocus
+                   ng-model="actor.name">
+            <span ng-show="addActor.name.$dirty && addActor.name.$invalid">This field is required</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputBiography">Biography</label>
+        <div class="controls">
+            <text-angular rows="5"
+                          id="inputBiography"
+                          name="biography"
+                          class="input-block-level"
+                          ng-model="actor.biography">
+            </text-angular>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit"
+                ng-show="addActor.$valid"
+                class="btn btn-primary"
+                ng-click="save(actor)">
+            Save
+        </button>
+    </div>
+</form>

@@ -11,9 +11,12 @@ function WelcomeCtrl ($scope, moviesResponse) {
     $scope.movies = moviesResponse.data;
 }
 
-function MoviesListCtrl ($scope, moviesResponse) {
+function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
+    $scope.add = function(){
+        $location.path = $location;
+    };
 }
 
 MoviesListCtrl.resolve = {
